@@ -60,12 +60,12 @@ function draw() {
       aeroplane.velocityY=7.5;
     }else{
       aeroplane.velocityY=0;
-    }
+        }
     if(frameCount%2==1){
       distance=distance+1
     }
-    if(moneyGroup.isTouching(aeroplane)){
-      moneyGroup.destroyEach();
+    if(aeroplane.isTouching(moneyGroup)){
+      moneyGroup[0].destroy();
       salary=salary+10;
     }
 
